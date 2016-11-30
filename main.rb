@@ -1,13 +1,16 @@
 require './mapping.rb'
 
-puts 'Input letters phrase in lower case: '
+print 'Input letters phrase in lower case: '
 phrase = gets
+
 result = []
+rows = Array.new(3, '')
+
 phrase[0..-2].each_char do |char|
   result.push(Mapping::LETTERS_TO_BRAILLE_MAP[char])
 end
 
-rows = Array.new(3, '')
+
 
 def collect_chars(array)
   array.map { |x| x == 0 ? ' ' : Mapping::DOT }.push('  ').join
