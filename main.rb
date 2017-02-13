@@ -10,8 +10,6 @@ phrase[0..-2].each_char do |char|
   result.push(Mapping::LETTERS_TO_BRAILLE_MAP[char])
 end
 
-
-
 def collect_chars(array)
   array.map { |x| x == 0 ? ' ' : Mapping::DOT }.push('  ').join
 end
